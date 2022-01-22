@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
 
     public GameObject removeAdsBtn;
 
-
     public Slider slider;
     public TextMeshProUGUI progressText;
 
@@ -34,7 +33,6 @@ public class GameManager : MonoBehaviour
 
     public void Quit()
     {
-        // Debug.Log("Quited !");
         Application.Quit();
     }
 
@@ -44,7 +42,6 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 1;
         }
-        // SceneManager.LoadScene(1);
         StartCoroutine(LoadAsynchronously(2));
     }
 
@@ -71,7 +68,6 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 1;
         }
-        // SceneManager.LoadScene(0);
         StartCoroutine(LoadAsynchronously(1));
     }
 
@@ -86,25 +82,4 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         audioSource.Play();
     }
-
-    // public void SoundToggle(bool chk)
-    // {
-    //     if (chk)
-    //     {
-    //         AudioListener.volume = 0;
-    //     }
-    //     else
-    //     {
-    //         AudioListener.volume = 1;
-    //     }
-    //     PlayerPrefs.Save();
-    // }
-
-    // public void ResetScore()
-    // {
-    //     PlayerControl.ResetScore();
-    //     playFabManager.SendLeaderBoard(0);
-    //     SSTools.ShowMessage("Score Reset successfully!", SSTools.Position.bottom, SSTools.Time.oneSecond);
-    // }
-
 }

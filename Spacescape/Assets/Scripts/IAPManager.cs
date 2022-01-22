@@ -182,7 +182,6 @@ public class IAPManager : MonoBehaviour, IStoreListener
             }
             Debug.Log("All ads Removed!");
             PlayerPrefs.Save();
-            SSTools.ShowMessage("Purchase Complete!", SSTools.Position.bottom, SSTools.Time.oneSecond);
             StartCoroutine(LoadAsynchronously(1));
         }
         // Otherwise ...
@@ -256,7 +255,6 @@ public class IAPManager : MonoBehaviour, IStoreListener
             Debug.Log("All ads Removed!");
             PlayerPrefs.Save();
             StartCoroutine(LoadAsynchronously(1));
-            SSTools.ShowMessage("Purchase Restore Complete!", SSTools.Position.bottom, SSTools.Time.oneSecond);
         }
 
         // Or ... a subscription product has been purchased by this user.
@@ -267,7 +265,7 @@ public class IAPManager : MonoBehaviour, IStoreListener
         // }
 
         // Or ... an unknown product has been purchased by this user. Fill in additional products here....
-        
+
         else
         {
             Debug.Log(string.Format("ProcessPurchase: FAIL. Unrecognized product: '{0}'", args.purchasedProduct.definition.id));

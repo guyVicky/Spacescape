@@ -22,7 +22,6 @@ public class PlayerControl : MonoBehaviour
     public float forwardSpeed;
     public GameObject GameOver;
     public GameObject Canvas;
-    // [SerializeField]
     public AudioSource audioSource;
     public AudioClip explosionAudio;
     public AudioClip boostAudio;
@@ -33,9 +32,6 @@ public class PlayerControl : MonoBehaviour
     public Transform target;
     public float smoothSpeed = 0.125f;
     public Vector3 offset;
-
-    // MainCamera.transform.position = new Vector3(Player.transform.position.x + 2.5f, Player.transform.position.y, -10);
-
 
     // Start is called before the first frame update
     void Start()
@@ -95,9 +91,6 @@ public class PlayerControl : MonoBehaviour
                     break;
             }
         }
-
-
-
         score++;
         highScore = (int)score;
         scoreText.text = highScore.ToString();
