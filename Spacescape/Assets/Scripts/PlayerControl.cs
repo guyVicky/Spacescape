@@ -33,9 +33,12 @@ public class PlayerControl : MonoBehaviour
     public float smoothSpeed = 0.125f;
     public Vector3 offset;
 
+    public bool isGameOver = false;
+
     // Start is called before the first frame update
     void Start()
     {
+        isGameOver = false;
         Instance = this;
         startpos = transform.position;
         rb = GetComponent<Rigidbody2D>();
@@ -120,6 +123,9 @@ public class PlayerControl : MonoBehaviour
         Canvas.SetActive(false);
         Destroy(Player);
         setHighScore();
+
+        isGameOver = true;
+
     }
 
     //Set the High-Score
