@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "189775839990",
+    "project_id": "spacescape-2021",
+    "storage_bucket": "spacescape-2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:189775839990:android:ca6d20c11504aef80ea2d7",
+        "android_client_info": {
+          "package_name": "com.srb.spacescape"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "189775839990-j3ot85gsphemhiebsdjcqm31av02onh8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.srb.spacescape",
+            "certificate_hash": "fea588630c9a8098fece5c862084fd660ffb2cbb"
+          }
+        },
+        {
+          "client_id": "189775839990-i7rbdvcp43hlrajp2t3v382ddf7c2i56.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAo4SHEev5wrGh-dg2S6ijCL660dC20GiE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "189775839990-i7rbdvcp43hlrajp2t3v382ddf7c2i56.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
