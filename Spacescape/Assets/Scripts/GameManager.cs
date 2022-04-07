@@ -1,31 +1,35 @@
 ﻿using System.Collections;
-
 using TMPro;
-
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-
 public class GameManager : MonoBehaviour
 {
     public AudioSource audioSource;
+
     public PlayFabManager playFabManager;
 
     public GameObject loadingCanvas;
+
     public GameObject mainCanvas;
 
     public GameObject removeAdsBtn;
 
     public Slider slider;
+
     public TextMeshProUGUI progressText;
 
     private void Awake()
     {
         var currResolution = Screen.currentResolution.ToString();
-        var refreshRate = (currResolution.Substring(currResolution.Length - 4)).Substring(0, 2);
+        Debug.Log(Screen.currentResolution);
+        var refreshRate =
+            (currResolution.Substring(currResolution.Length - 4))
+                .Substring(0, 2);
         Application.targetFrameRate = int.Parse(refreshRate);
     }
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -51,7 +55,6 @@ public class GameManager : MonoBehaviour
 
         mainCanvas.SetActive(false);
         loadingCanvas.SetActive(true);
-
 
         while (!operation.isDone)
         {
